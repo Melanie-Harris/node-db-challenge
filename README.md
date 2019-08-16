@@ -38,13 +38,18 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [x] Explain the difference between `Relational Databases` and `SQL`.
+ A relational database is a set of formally described tables from which data can be accessed or reassembled in many different ways without having to reorganize the database tables. The standard user and application programming interface (API) of a relational database is the Structured Query Language (SQL). SQL statements are used both for interactive queries for information from a relational database and for gathering data for reports. SQL, the Structured Query Language, is a language (or a family of closely related languages or dialects) which is typically used to query a Relational Data Base Management System. The RDBMS is the system, and SQL is the language used to interact with the system.
 
-- [ ] Why do tables need a `primary key`?
+- [x] Why do tables need a `primary key`?
+ A primary key is a field in a table which uniquely identifies each row/record in a database table. Each database table needs a primary key because it ensures "row-level" accessibility. If you choose an appropriate primary key, you can specify a primary key value, which lets you query each table row individually and modify each row without altering other rows in the same table. The values that compose a primary key column are unique; no two values are the same. Each table has one and only one primary key,
 
-- [ ] What is the name given to a table column that references the primary key on another table.
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+- [x] What is the name given to a table column that references the primary key on another table.
+ Foreign Key: A foreign key is a column (or columns) that references a column (most often the primary key) of another table. The purpose of the foreign key is to ensure referential integrity of the data. In other words, only values that are supposed to appear in the database are permitted.
+
+- [x] What do we need in order to have a _many to many_ relationship between two tables.
+ A many-to-many relationship occurs when multiple records in a table are associated with multiple records in another table. you can break the many-to-many relationship into two one-to-many relationships by using a third table, called a join table. Each record in a join table includes a match field that contains the value of the primary keys of the two tables it joins. (In the join table, these match fields are foreign keys.) These foreign key fields are populated with data as records in the join table are created from either table it joins.
 
 ## Minimum Viable Product
 
