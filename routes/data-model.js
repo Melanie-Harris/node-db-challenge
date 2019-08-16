@@ -55,6 +55,5 @@ function getTask(id) {
     .leftJoin("task", { "projects.task_id": "task.id" })
     .where({ "task.id": Number(id) });}
 
-      //WORKING THROUGH THIS LAST ONE: NOTES BELOW THIS LINE
-      //"hmm... lets think"....
-      //'tasks.notes',,'projects.id'
+     
+      
