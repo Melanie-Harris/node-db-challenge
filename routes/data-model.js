@@ -9,6 +9,7 @@ module.exports = {
   getProjects,
   addTasks,
   getTasks,
+  getTask,
 };
 
 function getResources() {
@@ -41,16 +42,18 @@ function addTasks(item) {
 function getTasks() {
   return db("task");
 }
-//The list of tasks should including the project name and project description**.
-function getTasks(id) {
+//The list of tasks should include the project name and project description**.
+function getTask(id) {
   return db
     .select([
-      "projects.name",
-      "projects.description",
-    ])// returns records from 1 or more tables
+      "projects.project_name",
+      "projects.project_description",
+      "task.task_description",
+      "task.task_name"
+    ]) // returns records from 1 or more tables
     .from("projects")
-    .leftJoin("tasks", { "projects.task_id": "tasks.id" })
-    .where({ "tasks.id": Number(id) });}
+    .leftJoin("task", { "projects.task_id": "task.id" })
+    .where({ "task.id": Number(id) });}
 
       //WORKING THROUGH THIS LAST ONE: NOTES BELOW THIS LINE
       //"hmm... lets think"....
