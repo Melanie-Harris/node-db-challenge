@@ -7,6 +7,6 @@ const server = express();
 
 server.use(helmet());
 server.use(express.json());
-server.use("/api/data", DataRouter);
+server.use("/api", DataRouter);
 
 module.exports = server;

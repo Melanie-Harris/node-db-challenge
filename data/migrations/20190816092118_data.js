@@ -50,14 +50,17 @@ exports.up = function(knex, Promise) {
     tbl.integer("project_id")// creates foreign key that connects
           .unsigned() // restrictions for positive numbers only
           .notNullable()
-          .unique()
           .references("id")// references a specific id number
           .inTable("projects")// connects two tables
           .onUpdate("CASCADE")// changes all occurrences of the id
           .onDelete("CASCADE")// changes all occurrences of the id
+          .index()
 })
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema
+    .dropTableIfExists("task")
+    .dropTableIfExists("resources")
+    .dropTableIfExists("projects");
 };
