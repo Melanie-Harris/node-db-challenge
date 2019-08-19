@@ -1,3 +1,12 @@
+// **********NOTES FROM REVIEW: 
+//ADDED ERROR CODES, 
+//FIXED PROBLEMS MISSED FROM README MVP:
+    //When returning `project` or `task` information, the `completed` property should be `true` or `false`.
+//WORKED ON ONE TO MANY RELATIONSHIP
+//STUDIED JS THIS WEEKEND
+
+//*******COMPLETED********* */
+
 const express = require("express");
 
 const routes = require("./data-model.js");
